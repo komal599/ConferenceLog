@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title></title>
+  </head>
+  <body>
+    <div class="card d-flex rounded w-100 ">
+    <div class="d-flex card-header">
+      <div class="col-md-1 headerfont">Image</div>
+      <div class="col-md-2 headerfont">Conference Name</div>
+      <div class="col-md-2 headerfont">Start Date</div>
+      <div class="col-md-2 headerfont">End Date</div>
+      <div class="col-md-1 headerfont">Entry Type</div>
+      <div class="col-md-1 headerfont">Place</div>
+      <div class="col-md-3 headerfont">Conference URL</div>
+    </div>
+    <div class="d-flex solid shadow-lg p-3 mb-1 bg-white text-wrap " *ngFor ="let data of usersData['free']">
+      <p class="col-md-1"><img src="{{data.imageURL}}" height="56" width="67"></p>
+      <p class="col-md-2">{{data.confName}}</p>
+      <p class="col-md-2">{{data.confStartDate}}</p> 
+      <p class="col-md-2">{{data.confEndDate}}</p>
+      <p class="col-md-1">{{data.entryType}}</p>
+      <p class="col-md-1">{{data.city}}</p>
+      <p class="col-md-3">{{data.confUrl}}</p>
+    </div>
+    
+  </div>
+
+  <div class="card rounded w-100" >
+
+  <div class="d-flex solid shadow-lg p-3 mb-1 bg-white" *ngFor ="let data of usersData['paid']">
+    <p class="col-md-1"><img src="{{data.imageURL}}" height="56" width="67"></p>
+    <p class="col-md-2">{{data.confName}}</p>
+    <p class="col-md-2">{{data.confStartDate}}</p> 
+    <p class="col-md-2">{{data.confEndDate}}</p>
+    <p class="col-md-1">{{data.entryType}}</p>
+    <p class="col-md-1">{{data.city}}</p>
+    <p class="col-md-3">{{data.confUrl}}</p>
+  </div>
+ 
+  
+</div>
+
+
+
+
+
+  </body>
+</html>
